@@ -201,8 +201,8 @@ class COCOEvalWrapper(cocoeval.COCOeval):
     return self.params.catIds
 
   def ComputeMetrics(self,
-                     include_metrics_per_category=False,
-                     all_metrics_per_category=False,
+                     include_metrics_per_category=True,
+                     all_metrics_per_category=True,
                      super_categories=None):
     """Computes detection/keypoint metrics.
 

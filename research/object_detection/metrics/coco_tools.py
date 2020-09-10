@@ -313,6 +313,10 @@ class COCOEvalWrapper(cocoeval.COCOeval):
       # Kept for backward compatilbility
       per_category_ap['PerformanceByCategory/mAP/{}'.format(
           category)] = self.category_stats[0][category_index]
+      per_category_ap['PerformanceByCategory/mAP@.50IOU/{}'.format(
+          category)] = self.category_stats[1][category_index]
+      per_category_ap['PerformanceByCategory/AR/{}'.format(
+          category)] = self.category_stats[6][category_index]
       if super_categories:
         for key in super_categories:
           if category in super_categories[key]:

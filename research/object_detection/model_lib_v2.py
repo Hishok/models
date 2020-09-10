@@ -423,8 +423,8 @@ def train_loop(
     train_steps=None,
     use_tpu=False,
     save_final_config=False,
-    checkpoint_every_n=1000,
-    checkpoint_max_to_keep=7,
+    checkpoint_every_n=500,
+    checkpoint_max_to_keep=20,
     record_summaries=True,
     **kwargs):
   """Trains a model using eager + functions.
